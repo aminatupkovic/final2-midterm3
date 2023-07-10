@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Final and Midterm Makeup Exam 2023</title>
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      .panel {
+        min-height: 390px;
+      }
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script
+      src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZh3w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Midterm Exam</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+      <div class="jumbotron">
+        <h1>
+          Welcome to Final and Midterm Makeup Exam at course Introduction to Web
+          Programming
+        </h1>
+        <p>
+          This is skeleton project to save you time on exam. You have to
+          populate missing snippet codes to make this project functional
+        </p>
+
+        <h3>
+          Following parts should be completed after complemetition of all exams
+          that you are going to submit
+        </h3>
+        <ul>
+          <li>
+            1. Make github repository (name it using your first name and last
+            name.). Make it PRIVATE. Add DzelilaMehanovic as collaborator.
+          </li>
+          <li>
+            2. Push your code to github (do not upload files)
+          </li>
+          <li>
+            3. Zip your code and upload to LMS quiz assignment.
+          </li>
+        </ul>
+        <h3>Following parts should be completed for MIDTERM MAKEUP</h3>
+        <ul>
+          <li>
+            1. Create midterm-exam database with one table named locations
+          </li>
+          <li>
+            2. Connection to MySQL database in rest/dao/BaseDao.php file per
+            TODO instructions in the file
+          </li>
+          <li>
+            3. REST endpoint rest/midterm/connection-check in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            4. REST endpoint rest/midterm/input_data in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            5. REST endpoint rest/midterm/summary in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            6. REST endpoint rest/midterm/report_per_country in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            7. REST endpoint rest/midterm/search in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            8. Service method input_data in rest/services/MidtermService.php
+            file
+          </li>
+          <li>
+            9. Service method summary in rest/services/MidtermService.php file
+          </li>
+          <li>
+            10. Service method report_per_country in
+            rest/services/MidtermService.php file
+          </li>
+          <li>
+            11. Service method search in rest/services/MidtermService.php file
+          </li>
+          <li>
+            12. DAO method input_data in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            13. DAO method summary in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            14. DAO method report_per_country in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            15. DAO method research in rest/dao/MidtermDao.php file
+          </li>
+        </ul>
+
+        <h3>Following parts should be completed for FINAL</h3>
+        <ul>
+          <li>
+            1. Implement TODO #1 in index.html
+          </li>
+          <li>
+            2. Implement TODO #2 in index.html
+          </li>
+          <li>
+            3. Implement TODO #3 in index.html
+          </li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div id="high"></div>
+  </body>
+
+  <script>
+    /*TODO #1
+     * Load content from IP2LOCATION.json file
+     */
+     
+     
+
+     $(function () {
+                var fetchdata_json = new Array();   
+                $.getJSON('IP2LOCATION.json', function(data) {
+                    // Populate simple Languages
+                    for (i = 0; i < data.length; i++){
+                        fetchdata_json.push([data[i].country, data[i].city]);
+                    }
+                 
+                    // here simple bar draw chart
+                    $('#high').highcharts({
+                    chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Location"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: "Country"
+                        }
+                    },
+                    series: [{
+                       name: 'City',
+                        data: fetchdata_json
+                    }]
+                }); 
+            });
+        });
+     /*TODO #2
+     * Use jQuery highcharts library to shows countries and total number of cities in each country
+     */
+      
+
+    /*TODO #3
+     * Use jQuery Datatable library to create HTML table with id = locations
+     * This table will list all countries with following columns:
+     * total number of regions and total number of cities
+     */
+  </script>
+</html>
